@@ -9,6 +9,9 @@
 //	███████╗██║██║░░░░░╚█████╔╝
 //	╚══════╝╚═╝╚═╝░░░░░░╚════╝░
 // 
+// Stack - a data structure that allows you to add new elements and remove existing ones only from 1 end, respectively,
+// the last added element will be the first to be removed, (Last In First Out).
+// Usually the stack provides 3 main methods: Push, Pop, Peek - view the top element.
 // 
 //	+   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0   +
 //	+   0			          0   +
@@ -76,7 +79,7 @@ namespace StackDemo
 	template<typename T>
 	inline Stack<T>::Stack(const Stack& external)
 	{
-		this->_data = new T[external.size];
+		this->_data = new T[external._size];
 		this->_size = external._size;
 
 		for (size_t i = 0; i < _size; i++)
@@ -86,7 +89,7 @@ namespace StackDemo
 	template<typename T>
 	inline Stack<T>::Stack(Stack&& external)
 	{
-		this->_data = new T[external.size];
+		this->_data = new T[external._size];
 		this->_size = external._size;
 
 		for (size_t i = 0; i < _size; i++)
@@ -132,8 +135,23 @@ namespace StackDemo
 	{
 		if (this != &external)
 		{
-			std::swap(this->_data, external._data);
-			std::swap(this->_size, external._size);
+			T* tmp = new T[_size];
+			size_t tsize = _size;
+
+			for (size_t i = 0; i < _size; i++)
+				tmp[i] = _data[i];
+
+			delete[] _data;
+			_data = new T[external._size];
+
+			for (size_t i = 0; i < external._size; i++)
+				_data[i] = external._data[i];
+
+			delete[] external._data;
+			external._data = tmp;
+
+			_size = external._size;
+			external._size = tsize;
 		}
 	}
 

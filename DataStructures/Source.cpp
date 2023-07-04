@@ -1,10 +1,12 @@
 #include "Header.h"
 
 void StackPresentation();
+void QueuePresentation();
 
 int main()
 {
 	StackPresentation();
+	QueuePresentation();
 
 	return 0;
 }
@@ -17,16 +19,27 @@ void StackPresentation()
 	data1.push(1);
 	data1.push(2);
 	data1.push(3);
+
 	data2.push(4);
 	data2.push(5);
 	data2.push(6);
 	data2.push(7);
+
 	data1.pop();
-	data2.pop();
 
-	cout << data1.peek() << endl;
+	for (size_t i = 0; i < data1.size(); i++)
+	{
+		cout << data1[i];
+	}
+}
 
-	data2.swap(data1);
+void QueuePresentation()
+{
+	QueueDemo::Queue<int> data1;
 
-	cout << data1.size() << endl << data2[1];
+	data1.push(1);
+	data1.push(2);
+	data1.push(3);
+
+	cout << data1.front() << " " << data1.back();
 }

@@ -16,6 +16,9 @@
     <Filter Include="Stack">
       <UniqueIdentifier>{3d28d95a-e6a7-4871-8ab4-5e703358d664}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Queue">
+      <UniqueIdentifier>{e28f77e5-cb99-4418-ba08-26bc343bcff8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -28,6 +31,9 @@
     </ClInclude>
     <ClInclude Include="Header.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>Queue</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
