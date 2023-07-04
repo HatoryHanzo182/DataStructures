@@ -51,7 +51,6 @@
 //  +		      +			  +
 //
 
-
 namespace QueueDemo
 {
 	template<typename T>
