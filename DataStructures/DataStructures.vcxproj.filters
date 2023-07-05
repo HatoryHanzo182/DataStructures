@@ -19,6 +19,9 @@
     <Filter Include="Queue">
       <UniqueIdentifier>{e28f77e5-cb99-4418-ba08-26bc343bcff8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SinglyLinkedList">
+      <UniqueIdentifier>{c8e06dcb-9603-494a-b6e4-a347c9819cc4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -34,6 +37,9 @@
     </ClInclude>
     <ClInclude Include="Queue.h">
       <Filter>Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="SinglyLinkedList.h">
+      <Filter>SinglyLinkedList</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

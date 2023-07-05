@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="Header.h" />
     <ClInclude Include="Queue.h" />
+    <ClInclude Include="SinglyLinkedList.h" />
     <ClInclude Include="Stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
