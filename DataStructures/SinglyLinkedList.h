@@ -8,7 +8,6 @@ namespace SinglyLinkedListDemo
 	{
 	private:
 		#pragma region Node struct.
-		template<typename T>
 		struct Node
 		{
 		public:
@@ -58,7 +57,7 @@ namespace SinglyLinkedListDemo
 		this->_p_pnext = p_pnext;
 		this->_data = data;
 	}
-#pragma endregion
+	#pragma endregion
 
 	template<typename T>
 	inline SinglyLinkedList<T>::SinglyLinkedList() 
