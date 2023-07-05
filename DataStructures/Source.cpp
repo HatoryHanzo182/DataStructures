@@ -2,11 +2,13 @@
 
 void StackPresentation();
 void QueuePresentation();
+void SinglyLinkedListPresentation();
 
 int main()
 {
-	StackPresentation();
-	QueuePresentation();
+	//StackPresentation();
+	//QueuePresentation();
+	SinglyLinkedListPresentation();
 
 	return 0;
 }
@@ -42,4 +44,14 @@ void QueuePresentation()
 	data1.push(3);
 
 	cout << data1.front() << " " << data1.back();
+}
+
+void SinglyLinkedListPresentation()
+{
+	SinglyLinkedListDemo::SinglyLinkedList<int> d;
+
+	d.push_back(1);
+	d.push_back(2);
+	d.push_back(3);
+	d.Print();
 }

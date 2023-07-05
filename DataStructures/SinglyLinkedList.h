@@ -8,6 +8,7 @@ namespace SinglyLinkedListDemo
 	{
 	private:
 		#pragma region Node struct.
+		template<typename T>
 		struct Node
 		{
 		public:
@@ -24,21 +25,23 @@ namespace SinglyLinkedListDemo
 	public:
 		SinglyLinkedList();
 		SinglyLinkedList(const SinglyLinkedList&);
-		SinglyLinkedList(SinglyLinkedList&&);
+		//SinglyLinkedList(SinglyLinkedList&&);
 
 		void push_back(const T&);
-		void front_back(const T&);
-		void pop_back(const T&);
-		void pop_front(const T&);
-		void remove_by_index(const size_t);
-		void clear();
-		void swap();
+		//void front_back(const T&);
+		//void pop_back(const T&);
+		//void pop_front(const T&);
+		//void remove_by_index(const size_t);
+		//void size();
+		//void clear();
+		//void swap();
 
 		SinglyLinkedList& operator=(const SinglyLinkedList&);
-		SinglyLinkedList&& operator=(SinglyLinkedList&&);
-		T operator[](size_t);
-
-		~SinglyLinkedList();
+		//SinglyLinkedList&& operator=(SinglyLinkedList&&);
+		//T operator[](size_t);
+		//
+		//~SinglyLinkedList();
+		void Print() const;
 	};
 
 	#pragma region Implementation Node.
@@ -86,6 +89,26 @@ namespace SinglyLinkedListDemo
 		}
 		_size = external._size;
 	}
+
+	template<typename T>
+	inline void SinglyLinkedList<T>::push_back(const T& meaning)
+	{
+		Node<T>* tmp = new Node<T>(meaning);
+
+		if (_head == nullptr)
+			_head = tmp;
+		else
+		{
+			Node<T>* current = _head;
+
+			while (current->_pnext != nullptr)
+				current = current->_pnext;
+
+			current->_pnext = tmp;
+		}
+		++_size;
+	}
+
 	template<typename T>
 	inline SinglyLinkedList<T>& SinglyLinkedList<T>::operator=(const SinglyLinkedList& external)
 	{
@@ -107,5 +130,19 @@ namespace SinglyLinkedListDemo
 			current = current->_pnext
 		}
 		_size = external._size;
+	}
+
+
+	template<typename T>
+	inline void SinglyLinkedList<T>::Print() const
+	{
+		ListItem<TValue>* current = _head;
+
+		while (current != nullptr)
+		{
+			cout << current->_data << "\t";
+			current = current->_pnext;
+		}
+		cout << endl;
 	}
 }
