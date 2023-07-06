@@ -49,9 +49,27 @@ void QueuePresentation()
 void SinglyLinkedListPresentation()
 {
 	SinglyLinkedListDemo::SinglyLinkedList<int> d;
+	SinglyLinkedListDemo::SinglyLinkedList<int> c;
+
 
 	d.push_back(1);
 	d.push_back(2);
 	d.push_back(3);
-	d.Print();
+	d.push_front(4);
+
+	c.push_back(5);
+	c.push_back(6);
+	c.push_back(7);
+	c.push_front(8);
+
+	for (size_t i = 0; i < d.size(); i++)
+		cout << d[i] << " | ";
+
+	d.remove_by_index(0);
+
+	cout << endl;
+	for (size_t i = 0; i < d.size(); i++)
+		cout << d[i] << " | ";
+
+
 }
