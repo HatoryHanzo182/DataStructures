@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include "Header.h"
 
-
+//
 // ░██████╗██╗███╗░░██╗░██████╗░██╗░░░░░██╗░░░██╗  ██╗░░░░░██╗███╗░░██╗██╗░░██╗███████╗██████╗░
 // ██╔════╝██║████╗░██║██╔════╝░██║░░░░░╚██╗░██╔╝  ██║░░░░░██║████╗░██║██║░██╔╝██╔════╝██╔══██╗
 // ╚█████╗░██║██╔██╗██║██║░░██╗░██║░░░░░░╚████╔╝░  ██║░░░░░██║██╔██╗██║█████═╝░█████╗░░██║░░██║
@@ -21,26 +21,14 @@
 // The advantage of a list is that addition and deletion will have an o1 property. The size of the list is limited by the amount of memory and
 // the width of the pointers. The disadvantage of the list is that you cannot access the element by index; in order to find the element,
 // you must search in the list; additional memory is also spent on the beginning of storing pointers (further).
-//					
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//						   
-// 0 0 0 0 0 0 0 			    0 0 0 0 0 0 0 		        0 0 0 0 0 0 0 		        0 0 0 0 0 0 0 		   
-// 0		   0		   	    0			0		   		0			0		   		0			0		   
-// 0		   0		   	    0			0		   		0			0		   		0			0		   
-// 0		   0		   +    0			0		   +	0			0		   +	0			0		   +
-// 0		   0		   ++   0			0		   ++	0			0		   ++	0			0		   ++
-// 0		   0++++++++++++++  0			0++++++++++++++	0			0++++++++++++++	0			0++++++++++++++
-// 0		   0+++++++++++++++	0			0+++++++++++++++0			0+++++++++++++++0			0+++++++++++++++ NULLPTR
-// 0		   0++++++++++++++  0			0++++++++++++++	0			0++++++++++++++	0			0++++++++++++++
-// 0		   0		   ++   0			0		   ++	0			0		   ++	0			0		   ++
-// 0		   0		   +    0			0		   +	0			0		   +	0			0		   +
-// 0		   0                0			0		  		0			0		  		0			0		  
-// 0		   0                0			0				0			0				0			0
-// 0 0 0 0 0 0 0                0 0 0 0 0 0 0				0 0 0 0 0 0 0				0 0 0 0 0 0 0
 //
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//         _head                          _pnext                  _pnext           _pnext
+//           |                             |                       |                |
+//           v                             v                       v                v
+//         +---+         +---+         +---+         +---+         +---+         +---+
+//         | 0 | ---->   | 0 | ---->   | 0 | ---->   | 0 | ---->   | 0 | ---->   | 0 | ----> NULLPTR.
+//         +---+         +---+         +---+         +---+         +---+         +---+
 //
-
 namespace SinglyLinkedListDemo
 {
 	#pragma region Node struct.
@@ -48,11 +36,11 @@ namespace SinglyLinkedListDemo
 	struct Node
 	{
 	public:
-		Node* _pnext;
-		t _data;
+		Node* _pnext;  // Pointer to the next node.
+		t _data;  // Data stored in the node.
 	public:
-		Node();
-		Node(const t&);
+		Node();  // Data stored in the node.
+		Node(const t&);  // Constructor with data.
 	};
 	#pragma endregion
 
@@ -60,27 +48,27 @@ namespace SinglyLinkedListDemo
 	class SinglyLinkedList
 	{
 	private:
-		Node<T>* _head;
-		size_t _size;
+		Node<T>* _head;  // Pointer to the head of the linked list.
+		size_t _size;  // Number of elements in the linked list.
 	public:
-		SinglyLinkedList();
-		SinglyLinkedList(const SinglyLinkedList&);
-		SinglyLinkedList(SinglyLinkedList&&);
+		SinglyLinkedList();  // Default constructor.
+		SinglyLinkedList(const SinglyLinkedList&);  // Copy constructor.
+		SinglyLinkedList(SinglyLinkedList&&);  // Move constructor.
 
-		void push_back(const T&);
-		void push_front(const T&);
-		void pop_back();
-		void pop_front();
-		void remove_by_index(const size_t);
-		size_t size() const;
-		void clear();
-		void swap(SinglyLinkedList&);
+		void push_back(const T&);  // Adds an element to the end of the list.
+		void push_front(const T&);  // Adds an element to the beginning of the list.
+		void pop_back();  // Removes the last element from the list.
+		void pop_front();  // Removes the first element from the list.
+		void remove_by_index(const size_t);  // Removes an element at the specified index.
+		size_t size() const;  // Returns the number of elements in the list.
+		void clear();  // Removes all elements from the list.
+		void swap(SinglyLinkedList&);  // Swaps the content of two linked lists.
 
-		SinglyLinkedList& operator=(const SinglyLinkedList&);
-		SinglyLinkedList&& operator=(SinglyLinkedList&&);
-		T operator[](size_t) const;
+		SinglyLinkedList& operator=(const SinglyLinkedList&);  // Copy assignment operator.
+		SinglyLinkedList&& operator=(SinglyLinkedList&&);  // Move assignment operator.
+		T operator[](size_t) const;  // Returns the element at the specified index.
 		
-		~SinglyLinkedList() = default;
+		~SinglyLinkedList() = default;  // Destructor.
 	};
 
 	#pragma region Implementation Node.
