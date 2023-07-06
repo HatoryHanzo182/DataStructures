@@ -12,33 +12,13 @@
 // Stack - a data structure that allows you to add new elements and remove existing ones only from 1 end, respectively,
 // the last added element will be the first to be removed, (Last In First Out).
 // Usually the stack provides 3 main methods: Push, Pop, Peek - view the top element.
-// 
-//	+   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0   +
-//	+   0			          0   +
-//	+   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0   +
-//	+				      +
-//	+				      +
-//	+	         +++++	      	      +
-//	+		 +++++	      	      +
-//	+		 +++++	      	      +
-//	+		 +++++	      	      +
-//	+	         +++++	              +
-//	+		 +++++	      	      +
-//	+	       +++++++++	      +
-//	+		+++++++	      	      +
-//	+		 +++++	      	      +
-//	+		  +++	      	      +
-//	+		   +	      	      +
-//	+				      +
-//	+   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0   +
-//	+   0				  0   +
-//	+   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0   +
-//	+				      +
-//	+   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0   +
-//	+   0			          0   +
-//	+   0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0   +
-//	+				      +
-//	+ + + + + + + + + + + + + + + + + + + +
+//
+//      +---+         +---+         +---+         +---+         +---+
+//      | 4 |         | 2 |         | 7 |         | 5 |         | 9 |
+//      +---+         +---+         +---+         +---+         +---+
+//        ^                                                       ^
+//        |                                                       |
+//       Top                                                    Bottom
 //
 
 namespace StackDemo

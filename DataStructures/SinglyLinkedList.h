@@ -22,9 +22,9 @@
 // the width of the pointers. The disadvantage of the list is that you cannot access the element by index; in order to find the element,
 // you must search in the list; additional memory is also spent on the beginning of storing pointers (further).
 //
-//         _head                          _pnext                  _pnext           _pnext
-//           |                             |                       |                |
-//           v                             v                       v                v
+//          _head         _pnext        _pnext        _pnext        _pnext        _pnext
+//           |             |             |             |             |             |
+//           v             v             v             v             v             v
 //         +---+         +---+         +---+         +---+         +---+         +---+
 //         | 0 | ---->   | 0 | ---->   | 0 | ---->   | 0 | ---->   | 0 | ---->   | 0 | ----> NULLPTR.
 //         +---+         +---+         +---+         +---+         +---+         +---+
