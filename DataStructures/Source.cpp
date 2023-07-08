@@ -84,6 +84,18 @@ void DoublyLinkedListDemoPresentation()
 	d.push_back(4);
 	d.push_front(19);
 
+	DoublyLinkedListDemo::DoublyLinkedList<int> c;
+
+	c.push_back(12);
+	c.push_back(323);
+	c.push_back(444);
+	c.swap(d);
+
 	for (size_t i = 0; i < d.size(); i++)
 		cout << d[i] << ", ";
+
+	cout << endl;
+	for (size_t i = 0; i < c.size(); i++)
+		cout << c[i] << ", ";
+
 }
