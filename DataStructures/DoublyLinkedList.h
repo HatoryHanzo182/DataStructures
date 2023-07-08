@@ -1,5 +1,57 @@
-#pragma once
+﻿#pragma once
 #include "Header.h"
+
+//
+//██████╗░░█████╗░██╗░░░██╗██████╗░██╗░░░░░██╗░░░██╗  ██╗░░░░░██╗███╗░░██╗██╗░░██╗███████╗██████╗░
+//██╔══██╗██╔══██╗██║░░░██║██╔══██╗██║░░░░░╚██╗░██╔╝  ██║░░░░░██║████╗░██║██║░██╔╝██╔════╝██╔══██╗
+//██║░░██║██║░░██║██║░░░██║██████╦╝██║░░░░░░╚████╔╝░  ██║░░░░░██║██╔██╗██║█████═╝░█████╗░░██║░░██║
+//██║░░██║██║░░██║██║░░░██║██╔══██╗██║░░░░░░░╚██╔╝░░  ██║░░░░░██║██║╚████║██╔═██╗░██╔══╝░░██║░░██║
+//██████╔╝╚█████╔╝╚██████╔╝██████╦╝███████╗░░░██║░░░  ███████╗██║██║░╚███║██║░╚██╗███████╗██████╔╝
+//╚═════╝░░╚════╝░░╚═════╝░╚═════╝░╚══════╝░░░╚═╝░░░  ╚══════╝╚═╝╚═╝░░╚══╝╚═╝░░╚═╝╚══════╝╚═════╝░
+//
+//██╗░░░░░██╗░██████╗████████╗
+//██║░░░░░██║██╔════╝╚══██╔══╝
+//██║░░░░░██║╚█████╗░░░░██║░░░
+//██║░░░░░██║░╚═══██╗░░░██║░░░
+//███████╗██║██████╔╝░░░██║░░░
+//╚══════╝╚═╝╚═════╝░░░░╚═╝░░░
+//
+// A Doubly Linked List is a data structure made up of nodes, each containing two pointers,
+// one pointing to the previous node and one pointing to the next node in the list. 
+// This allows you to access the elements of the list in both directions: from the beginning to the end and from the end to the beginning.
+// A doubly linked list structure usually consists of the following elements :
+// 
+// Node: Each node contains data(elements) and two pointers : _pnext(pointer to the next node) and _pprev(pointer to the previous node).
+// Head Node : This is the first node in the list.It contains no data and points to the first real node in the list.
+// Tail node : This is the last node in the list.It also contains no data and points to the last real node in the list.
+// Operations that are commonly supported by a doubly linked list include :
+// Adding an element to the end of the list(push_back) : Create a new data node and add it after the tail node.
+// Adding an element to the front of the list(push_front) : Create a new data node and add it in front of the head node.
+// Remove the last element of the list(pop_back) : Remove the tail node from the list.
+// Removing the first element of the list(pop_front) : Removes the head node from the list.
+// Remove an element at a given index(remove_by_index) : Removes a node at a given index in the list.
+// Get the list size(size) : Return the current number of elements in the list.
+// Clearing the list(clear) : Remove all items from the list.
+// Swap the contents of two lists(swap) : Swap the head and tail nodes of two lists for efficient data transfer.
+// 
+// A doubly linked list provides the flexibility to insert, remove, and access elements.
+// It can be useful when you need to efficiently add and remove elements both at the beginning and end of the list,
+// and also when you need to refer to the elements of the list in reverse order.
+// 
+//                  _head         _pnext        _pnext        _pnext        _pnext        _pnext
+//                   |             |             |             |             |             |
+//                   v             v             v             v             v             v
+//                 +---+         +---+         +---+         +---+         +---+         +---+
+//  NULLPTR <----> | 0 | <---->  | 0 | <---->  | 0 | <---->  | 0 | <---->  | 0 | <---->  | 0 | <----> NULLPTR
+//                 +---+         +---+         +---+         +---+         +---+         +---+
+//                   ^             ^             ^             ^             ^             ^
+//                   |             |             |             |             |             |
+//                  _pprev        _pprev        _pprev        _pprev        _pprev        _teil
+// 
+// 
+// 
+// 
+//
 
 namespace DoublyLinkedListDemo
 {
