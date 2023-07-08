@@ -29,6 +29,7 @@
 //         | 0 | ---->   | 0 | ---->   | 0 | ---->   | 0 | ---->   | 0 | ---->   | 0 | ----> NULLPTR.
 //         +---+         +---+         +---+         +---+         +---+         +---+
 //
+
 namespace SinglyLinkedListDemo
 {
 	#pragma region Node struct.
@@ -38,7 +39,7 @@ namespace SinglyLinkedListDemo
 	public:
 		Node* _pnext;  // Pointer to the next node.
 		t _data;  // Data stored in the node.
-	public:
+	
 		Node();  // Data stored in the node.
 		Node(const t&);  // Constructor with data.
 	};
@@ -65,7 +66,7 @@ namespace SinglyLinkedListDemo
 		void swap(SinglyLinkedList&);  // Swaps the content of two linked lists.
 
 		SinglyLinkedList& operator=(const SinglyLinkedList&);  // Copy assignment operator.
-		SinglyLinkedList&& operator=(SinglyLinkedList&&);  // Move assignment operator.
+		SinglyLinkedList& operator=(SinglyLinkedList&&);  // Move assignment operator.
 		T operator[](size_t) const;  // Returns the element at the specified index.
 		
 		~SinglyLinkedList() = default;  // Destructor.
@@ -287,7 +288,7 @@ namespace SinglyLinkedListDemo
 	}
 
 	template<typename T>
-	inline SinglyLinkedList<T>&& SinglyLinkedList<T>::operator=(SinglyLinkedList&& external)
+	inline SinglyLinkedList<T>& SinglyLinkedList<T>::operator=(SinglyLinkedList&& external)
 	{
 		Node<T>* current = external._head;
 		Node<T>* new_node = nullptr;

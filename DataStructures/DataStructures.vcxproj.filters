@@ -22,6 +22,9 @@
     <Filter Include="SinglyLinkedList">
       <UniqueIdentifier>{c8e06dcb-9603-494a-b6e4-a347c9819cc4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DoublyLinkedList">
+      <UniqueIdentifier>{87ae40ea-b1e5-4b65-9432-34c59b753263}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -40,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="SinglyLinkedList.h">
       <Filter>SinglyLinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="DoublyLinkedList.h">
+      <Filter>DoublyLinkedList</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

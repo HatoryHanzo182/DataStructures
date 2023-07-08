@@ -3,12 +3,14 @@
 void StackPresentation();
 void QueuePresentation();
 void SinglyLinkedListPresentation();
+void DoublyLinkedListDemoPresentation();
 
 int main()
 {
 	//StackPresentation();
 	//QueuePresentation();
-	SinglyLinkedListPresentation();
+	//SinglyLinkedListPresentation();
+	DoublyLinkedListDemoPresentation();
 
 	return 0;
 }
@@ -70,6 +72,18 @@ void SinglyLinkedListPresentation()
 	cout << endl;
 	for (size_t i = 0; i < d.size(); i++)
 		cout << d[i] << " | ";
+}
 
+void DoublyLinkedListDemoPresentation()
+{
+	DoublyLinkedListDemo::DoublyLinkedList<int> d;
 
+	d.push_back(1);
+	d.push_back(2);
+	d.push_back(3);
+	d.push_back(4);
+	d.push_front(19);
+
+	for (size_t i = 0; i < d.size(); i++)
+		cout << d[i] << ", ";
 }
