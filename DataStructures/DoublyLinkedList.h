@@ -47,10 +47,6 @@
 //                   ^             ^             ^             ^             ^             ^
 //                   |             |             |             |             |             |
 //                  _pprev        _pprev        _pprev        _pprev        _pprev        _teil
-// 
-// 
-// 
-// 
 //
 
 namespace DoublyLinkedListDemo
@@ -115,6 +111,7 @@ namespace DoublyLinkedListDemo
 	}
 	#pragma endregion
 
+	#pragma region Implementation.
 	template<typename T>
 	inline DoublyLinkedList<T>::DoublyLinkedList()
 	{
@@ -317,4 +314,5 @@ namespace DoublyLinkedListDemo
 
 		return tmp->_data;
 	}
+	#pragma endregion
 }

@@ -88,6 +88,7 @@ namespace SinglyLinkedListDemo
 	}
 	#pragma endregion
 
+	#pragma region Implementation.
 	template<typename T>
 	inline SinglyLinkedList<T>::SinglyLinkedList() 
 	{
@@ -329,4 +330,5 @@ namespace SinglyLinkedListDemo
 
 		return -1;
 	}
+    #pragma endregion
 }
