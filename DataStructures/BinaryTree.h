@@ -1,5 +1,43 @@
-#pragma once
+﻿#pragma once
 #include "Header.h"
+
+//
+//██████╗░██╗███╗░░██╗░█████╗░██████╗░██╗░░░██╗  ████████╗██████╗░███████╗███████╗
+//██╔══██╗██║████╗░██║██╔══██╗██╔══██╗╚██╗░██╔╝  ╚══██╔══╝██╔══██╗██╔════╝██╔════╝
+//██████╦╝██║██╔██╗██║███████║██████╔╝░╚████╔╝░  ░░░██║░░░██████╔╝█████╗░░█████╗░░
+//██╔══██╗██║██║╚████║██╔══██║██╔══██╗░░╚██╔╝░░  ░░░██║░░░██╔══██╗██╔══╝░░██╔══╝░░
+//██████╦╝██║██║░╚███║██║░░██║██║░░██║░░░██║░░░  ░░░██║░░░██║░░██║███████╗███████╗
+//╚═════╝░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░  ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚══════╝
+//
+// A binary tree is a hierarchical data structure consisting of nodes, where each node has a maximum of two children: left and right. 
+// The nodes are connected to each other by directed edges, and each node has a parent node, except for the root node, which has no parent.
+//
+// The main characteristics of a binary tree :
+// Root: This is the vertex that is the starting point of the tree.
+// Nodes : Each node can have at most two children(left and right).
+// Leaves : Leaves are nodes that have no children.
+// Descendants : Nodes directly below another node are called its children.
+// Parent : The node immediately preceding another node is called its parent.
+// Path : A path is a sequence of nodes starting at the root node and ending at a specific node.
+// Height : The height of a binary tree is the length of the longest path from the root node to any of its leaves.
+// 
+// Binary trees are widely used in computer science and have various variants and applications.They provide efficient access,
+// insertion, and deletion of elements in an ordered structure.Binary trees are also the basis for other data structures
+// such as binary heaps, AVL trees, and red - black trees.
+//
+//                 +---+
+//				   | 4 |
+//				   +---+
+//                /     \
+//           +---+       +---+
+// 			 | 2 |       | 7 |
+// 			 +---+       +---+
+//                      /     \
+//                 +---+       +---+
+// 				   | 5 |	   | 9 |
+// 				   +---+	   +---+
+// 
+
 
 namespace BinaryTreeDemo
 {
@@ -7,17 +45,17 @@ namespace BinaryTreeDemo
 	template<typename Key, typename Value>
 	struct Node
 	{
-		Node<Key, Value>* _parent;
-		Node<Key, Value>* _left;
-		Node<Key, Value>* _right;
-		Key _key;
-		Value _value;
+		Node<Key, Value>* _parent;  // A pointer to the parent node.
+		Node<Key, Value>* _left;  // A pointer to the left child node.
+		Node<Key, Value>* _right;  // A pointer to the right child node.
+		Key _key;  // The key associated with the node.
+		Value _value;  // The value associated with the node.
 
-		Node() : _parent(nullptr), _left(nullptr), _right(nullptr), _value() {}
-
-		bool IsLeft();
-		bool IsRight();
-		bool HasTwoChildren();
+		Node() : _parent(nullptr), _left(nullptr), _right(nullptr), _value() {}  // default constructor, initializes _parent, _left, and _right pointers to nullptr, 
+																				// and _value to the default value for the Value type.
+		bool IsLeft();  // Returns true if the node is a left child.
+		bool IsRight();  // Returns true if the node is a right child.
+		bool HasTwoChildren();  // Returns true if the node has both left and right children.
 	};
 	#pragma endregion
 
@@ -25,23 +63,23 @@ namespace BinaryTreeDemo
 	class BinTree
 	{
 	private:
-		Node<Key, Value>* _root;
-		size_t _size;
+		Node<Key, Value>* _root;  // A pointer to the root node of the binary tree. It represents the starting point of the tree and provides access to all other nodes.
+		size_t _size;  //  A variable that stores the number of nodes in the binary tree. It keeps track of the size or the total count of elements in the tree.
 
-		Node<Key, Value>* MinNode(Node<Key, Value>*) const;
-		Node<Key, Value>* SearchNode(Key) const;
-		void Clear(Node<Key, Value>*);
+		Node<Key, Value>* MinNode(Node<Key, Value>*) const;  // Returns a pointer to the node with the minimum key in the subtree starting from the given node.
+		Node<Key, Value>* SearchNode(Key) const;  // Searches for a node with the specified key in the tree and returns its pointer if found.
+		void Clear(Node<Key, Value>*);  // Clears the tree, freeing the memory.
 	public:
-		BinTree();
+		BinTree();  // Default constructor, initializes _root pointer to nullptr and _size to the default value for size_t type.
 
-		void Add(Key, Value);
-		void Remove(Key);
-		void Clear();
-		size_t Size() const;
+		void Add(Key, Value);  // Adds a new node with the specified key and value to the tree.
+		void Remove(Key);  // Removes the node with the specified key from the tree.
+		void Clear();  // Clears the tree, freeing the memory.
+		size_t Size() const;  // Returns the size of the tree.
 	
-		const Value& operator[](Key key) const;
+		const Value& operator[](Key key) const;  // Returns the value associated with the specified key in the tree.
 		
-		~BinTree();
+		~BinTree();  // Destructor, calls Clear() to free the memory.
 	};
 
 	#pragma region Implementation Node.
