@@ -130,6 +130,7 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="Queue.h" />

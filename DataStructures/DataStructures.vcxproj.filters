@@ -25,6 +25,9 @@
     <Filter Include="DoublyLinkedList">
       <UniqueIdentifier>{87ae40ea-b1e5-4b65-9432-34c59b753263}</UniqueIdentifier>
     </Filter>
+    <Filter Include="BinaryTree">
+      <UniqueIdentifier>{16864a51-6c5d-4c89-b232-12887fa2a15f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -46,6 +49,9 @@
     </ClInclude>
     <ClInclude Include="DoublyLinkedList.h">
       <Filter>DoublyLinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTree.h">
+      <Filter>BinaryTree</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

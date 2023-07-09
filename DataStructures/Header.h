@@ -7,3 +7,4 @@ using namespace std;
 #include "Queue.h"
 #include "SinglyLinkedList.h"
 #include "DoublyLinkedList.h"
+#include "BinaryTree.h"

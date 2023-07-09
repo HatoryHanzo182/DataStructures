@@ -3,14 +3,16 @@
 void StackPresentation();
 void QueuePresentation();
 void SinglyLinkedListPresentation();
-void DoublyLinkedListDemoPresentation();
+void DoublyLinkedListPresentation();
+void BinaryTreePresentation();
 
 int main()
 {
 	//StackPresentation();
 	//QueuePresentation();
 	//SinglyLinkedListPresentation();
-	DoublyLinkedListDemoPresentation();
+	//DoublyLinkedListPresentation();
+	BinaryTreePresentation();
 
 	return 0;
 }
@@ -53,7 +55,6 @@ void SinglyLinkedListPresentation()
 	SinglyLinkedListDemo::SinglyLinkedList<int> d;
 	SinglyLinkedListDemo::SinglyLinkedList<int> c;
 
-
 	d.push_back(1);
 	d.push_back(2);
 	d.push_back(3);
@@ -74,7 +75,7 @@ void SinglyLinkedListPresentation()
 		cout << d[i] << " | ";
 }
 
-void DoublyLinkedListDemoPresentation()
+void DoublyLinkedListPresentation()
 {
 	DoublyLinkedListDemo::DoublyLinkedList<int> d;
 
@@ -92,4 +93,9 @@ void DoublyLinkedListDemoPresentation()
 
 	for (size_t i = 0; i < c.size(); i++)
 		cout << c[i] << ", ";
+}
+
+void BinaryTreePresentation()
+{
+	BinaryTreeDemo::BinTree<int, string> d();
 }
