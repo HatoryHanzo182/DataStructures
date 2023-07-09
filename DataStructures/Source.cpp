@@ -93,9 +93,19 @@ void DoublyLinkedListPresentation()
 
 	for (size_t i = 0; i < c.size(); i++)
 		cout << c[i] << ", ";
-}
+}   
 
 void BinaryTreePresentation()
 {
-	BinaryTreeDemo::BinTree<int, string> d();
+	BinaryTreeDemo::BinTree<string, int> d;
+
+	d.Add("123239829", 2142);
+	d.Add("123211240", 2203);
+	d.Add("000000001", 9999);
+
+	cout << "Size: " << d.Size() << endl << d["123239829"] << endl;
+
+	d.Remove("123239829");
+
+	cout << "Size: " << d.Size() << endl;
 }
