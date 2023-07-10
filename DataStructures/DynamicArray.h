@@ -98,9 +98,6 @@ namespace DynamicArrayDemo
 	template<typename T>
 	inline void DynamicArr<T>::remove(const T data)
 	{
-		if (index > _size)
-			return;
-
 		T* tmp = new T[_size - 1];
 
 		for (size_t i = 0, j = 0; i < _size; i++)
