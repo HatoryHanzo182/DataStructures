@@ -1,32 +1,52 @@
-#pragma once
+﻿#pragma once
 #include "Header.h"
 
+//
+//██████╗░██╗░░░██╗███╗░░██╗░█████╗░███╗░░░███╗██╗░█████╗░  ░█████╗░██████╗░██████╗░░█████╗░██╗░░░██╗
+//██╔══██╗╚██╗░██╔╝████╗░██║██╔══██╗████╗░████║██║██╔══██╗  ██╔══██╗██╔══██╗██╔══██╗██╔══██╗╚██╗░██╔╝
+//██║░░██║░╚████╔╝░██╔██╗██║███████║██╔████╔██║██║██║░░╚═╝  ███████║██████╔╝██████╔╝███████║░╚████╔╝░
+//██║░░██║░░╚██╔╝░░██║╚████║██╔══██║██║╚██╔╝██║██║██║░░██╗  ██╔══██║██╔══██╗██╔══██╗██╔══██║░░╚██╔╝░░
+//██████╔╝░░░██║░░░██║░╚███║██║░░██║██║░╚═╝░██║██║╚█████╔╝  ██║░░██║██║░░██║██║░░██║██║░░██║░░░██║░░░
+//╚═════╝░░░░╚═╝░░░╚═╝░░╚══╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝░╚════╝░  ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░
+//
+// A dynamic array, also known as a resizable array or a dynamically allocated array, is a data structure that allows
+// the allocation and deallocation of memory at runtime to store a collection of elements. Unlike static arrays, 
+// which have a fixed size determined at compile time, dynamic arrays can grow or shrink in size as needed.
+// 
+// Dynamic arrays are implemented using pointers and dynamically allocated memory.
+// The elements of the array are stored in a contiguous block of memory, and the pointer 
+// keeps track of the starting address of this block.
+// 
+// +---+ +---+ +---+ +---+ +---+
+// | 1 | | 3 | | 2 | | 0 | | 9 |
+// +---+ +---+ +---+ +---+ +---+ 
+//
 namespace DynamicArrayDemo
 {
 	template<typename T>
 	class DynamicArr
 	{
 	private:
-		T* _data;
-		size_t _size;
+		T* _data;  // Pointer to the dynamic array data.
+		size_t _size;  // Size of the dynamic array.
 	public:
-		explicit DynamicArr();
-		explicit DynamicArr(const T);
-		DynamicArr(const DynamicArr&);
-		DynamicArr(DynamicArr&&);
+		explicit DynamicArr();  // Default constructor.
+		explicit DynamicArr(const T);  // Constructor with initial value.
+		DynamicArr(const DynamicArr&);  // Copy constructor.
+		DynamicArr(DynamicArr&&);  // Move constructor.
 
-		void push_back(const T);
-		void remove_index(const size_t);
-		void remove(const T);
-		void insert(const size_t, const T);
-		void swap(DynamicArr<T>&);
-		size_t size();
+		void push_back(const T);  // Add an element at the end of the array.
+		void remove_index(const size_t);  // Remove an element at a specific index.
+		void remove(const T);  // Remove the first occurrence of a value.
+		void insert(const size_t, const T);  // Insert an element at a specific index.
+		void swap(DynamicArr<T>&);  // Swap the content of two arrays.
+		size_t size();  // Get the size of the array.
 		
-		DynamicArr<T>& operator=(const DynamicArr<T>&);
-		DynamicArr<T>& operator=(DynamicArr<T>&&);
-		T operator[](size_t);
+		DynamicArr<T>& operator=(const DynamicArr<T>&);  // Copy assignment operator.
+		DynamicArr<T>& operator=(DynamicArr<T>&&);  // Move assignment operator.
+		T operator[](size_t); // Access element at a specific index.
 
-		~DynamicArr();
+		~DynamicArr();  // Destructor.
 	};
 
 	#pragma region Implementation.

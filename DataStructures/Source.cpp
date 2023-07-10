@@ -9,16 +9,17 @@ void BinaryTreePresentation();
 
 int main()
 {
-	//StackPresentation();
-	//QueuePresentation();
+	StackPresentation();
+	QueuePresentation();
 	DynamicArrayPresentation();
-	//SinglyLinkedListPresentation();
-	//DoublyLinkedListPresentation();
-	//BinaryTreePresentation();
+	SinglyLinkedListPresentation();
+	DoublyLinkedListPresentation();
+	BinaryTreePresentation();
 
 	return 0;
 }
 
+#pragma region Presentation.
 void StackPresentation()
 {
 	StackDemo::Stack<int> data1;
@@ -138,3 +139,4 @@ void BinaryTreePresentation()
 
 	cout << "Size: " << d.Size() << endl;
 }
+#pragma endregion
