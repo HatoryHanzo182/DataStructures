@@ -10,8 +10,6 @@ DataStructures is a collection of common data structures implemented in C++.
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -60,13 +58,3 @@ To use the DataStructures library, include the corresponding header files in you
 ```
 
 Refer to the documentation and examples provided for each data structure to learn how to use them effectively in your code.
-
-## Contributing
-
-Contributions to the DataStructures project are welcome! If you find any issues or have suggestions for improvement, please open an issue on the GitHub repository. You can also submit pull requests with your proposed changes.
-
-Before contributing, please review the [contribution guidelines](CONTRIBUTING.md) for details on the development process.
-
-## License
-
-The DataStructures library is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code for both personal and commercial projects. See the LICENSE file for more information.
