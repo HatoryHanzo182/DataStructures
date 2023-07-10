@@ -73,7 +73,7 @@ namespace DoublyLinkedListDemo
 		Node<T>* _tail;	 // Pointer to the last node in the list.
 		size_t _size;  // Number of elements in the list.
 	public:
-		DoublyLinkedList();  // Default constructor.
+		explicit DoublyLinkedList();  // Default constructor.
 	    DoublyLinkedList(const DoublyLinkedList&);  // Copy constructor.
 		DoublyLinkedList(DoublyLinkedList&&);  // Move constructor.
 		

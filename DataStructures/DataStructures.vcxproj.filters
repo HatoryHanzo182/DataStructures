@@ -28,6 +28,9 @@
     <Filter Include="BinaryTree">
       <UniqueIdentifier>{16864a51-6c5d-4c89-b232-12887fa2a15f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DynamicArray">
+      <UniqueIdentifier>{b669b3ea-aef5-4e2d-b36f-85ea53e9f188}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -52,6 +55,9 @@
     </ClInclude>
     <ClInclude Include="BinaryTree.h">
       <Filter>BinaryTree</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicArray.h">
+      <Filter>DynamicArray</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

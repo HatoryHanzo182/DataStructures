@@ -51,8 +51,8 @@ namespace BinaryTreeDemo
 		Key _key;  // The key associated with the node.
 		Value _value;  // The value associated with the node.
 
-		Node() : _parent(nullptr), _left(nullptr), _right(nullptr), _value() {}  // default constructor, initializes _parent, _left, and _right pointers to nullptr, 
-																				// and _value to the default value for the Value type.
+		explicit Node() : _parent(nullptr), _left(nullptr), _right(nullptr), _value() {}  // default constructor, initializes _parent, _left, and _right pointers to nullptr, 
+																				         // and _value to the default value for the Value type.
 		bool IsLeft();  // Returns true if the node is a left child.
 		bool IsRight();  // Returns true if the node is a right child.
 		bool HasTwoChildren();  // Returns true if the node has both left and right children.
@@ -70,7 +70,7 @@ namespace BinaryTreeDemo
 		Node<Key, Value>* SearchNode(Key) const;  // Searches for a node with the specified key in the tree and returns its pointer if found.
 		void Clear(Node<Key, Value>*);  // Clears the tree, freeing the memory.
 	public:
-		BinTree();  // Default constructor, initializes _root pointer to nullptr and _size to the default value for size_t type.
+		explicit BinTree();  // Default constructor, initializes _root pointer to nullptr and _size to the default value for size_t type.
 
 		void Add(Key, Value);  // Adds a new node with the specified key and value to the tree.
 		void Remove(Key);  // Removes the node with the specified key from the tree.

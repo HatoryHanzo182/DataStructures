@@ -40,8 +40,8 @@ namespace SinglyLinkedListDemo
 		Node* _pnext;  // Pointer to the next node.
 		t _data;  // Data stored in the node.
 	
-		Node();  // Data stored in the node.
-		Node(const t&);  // Constructor with data.
+		explicit Node();  // Data stored in the node.
+		explicit Node(const t&);  // Constructor with data.
 	};
 	#pragma endregion
 
@@ -52,7 +52,7 @@ namespace SinglyLinkedListDemo
 		Node<T>* _head;  // Pointer to the head of the linked list.
 		size_t _size;  // Number of elements in the linked list.
 	public:
-		SinglyLinkedList();  // Default constructor.
+		explicit SinglyLinkedList();  // Default constructor.
 		SinglyLinkedList(const SinglyLinkedList&);  // Copy constructor.
 		SinglyLinkedList(SinglyLinkedList&&);  // Move constructor.
 

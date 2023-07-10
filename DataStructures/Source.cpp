@@ -2,6 +2,7 @@
 
 void StackPresentation();
 void QueuePresentation();
+void DynamicArrayPresentation();
 void SinglyLinkedListPresentation();
 void DoublyLinkedListPresentation();
 void BinaryTreePresentation();
@@ -10,9 +11,10 @@ int main()
 {
 	//StackPresentation();
 	//QueuePresentation();
+	DynamicArrayPresentation();
 	//SinglyLinkedListPresentation();
 	//DoublyLinkedListPresentation();
-	BinaryTreePresentation();
+	//BinaryTreePresentation();
 
 	return 0;
 }
@@ -48,6 +50,26 @@ void QueuePresentation()
 	data1.push(3);
 
 	cout << data1.front() << " " << data1.back();
+}
+
+void DynamicArrayPresentation()
+{
+	DynamicArrayDemo::DynamicArr<int> d;
+
+	d.push_back(1);
+	d.push_back(2);
+	d.push_back(3);
+
+	for (size_t i = 0; i < d.size(); i++)
+		cout << d[i] << " | ";
+
+	d.remove_index(1);
+	
+	cout << endl;
+
+	for (size_t i = 0; i < d.size(); i++)
+		cout << d[i] << " | ";
+
 }
 
 void SinglyLinkedListPresentation()

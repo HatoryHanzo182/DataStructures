@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="DoublyLinkedList.h" />
+    <ClInclude Include="DynamicArray.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="SinglyLinkedList.h" />
