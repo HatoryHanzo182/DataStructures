@@ -63,7 +63,7 @@ void DynamicArrayPresentation()
 	for (size_t i = 0; i < d.size(); i++)
 		cout << d[i] << " | ";
 
-	d.remove_index(1);
+	d.remove(1);
 	
 	cout << endl;
 

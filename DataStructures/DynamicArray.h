@@ -22,8 +22,8 @@ namespace DynamicArrayDemo
 		//void swap();
 		size_t size();
 		
-		//DynamicArr& operator=(const DynamicArr&);
-		//DynamicArr& operator=(DynamicArr&&);
+		DynamicArr<T>& operator=(const DynamicArr<T>&);
+		DynamicArr<T>& operator=(DynamicArr<T>&&);
 		T operator[](size_t);
 
 		~DynamicArr();
@@ -48,17 +48,20 @@ namespace DynamicArrayDemo
 
 		for (size_t i = 0; i < external._size; i++)
 			_data[i] = external[i];
-		
 	}
 
 	template<typename T>
 	inline DynamicArr<T>::DynamicArr(DynamicArr&& external)
 	{
+		delete[] _data;
+		_data = new T[external._size];
 		_size = external._size;
-		_data = external._data;
 
+		for (size_t i = 0; i < external._size; i++)
+			_data[i] = external[i];
+
+		delete[] external._data;
 		external._size = 0;
-		external._data = nullptr;
 	}
 
 	template<typename T>
@@ -114,6 +117,35 @@ namespace DynamicArrayDemo
 
 	template<typename T>
 	inline size_t DynamicArr<T>::size() { return _size; }
+
+	template<typename T>
+	inline DynamicArr<T>& DynamicArr<T>::operator=(const DynamicArr<T>& external)
+	{
+		delete[] _data;
+		_data = new T[external._size];
+		_size = external._size;
+
+		for (size_t i = 0; i < external._size; i++)
+			_data[i] = external[i];
+
+		return *this;
+	}
+
+	template<typename T>
+	inline DynamicArr<T>& DynamicArr<T>::operator=(DynamicArr<T>&& external)
+	{
+		delete[] _data;
+		_data = new T[external._size];
+		_size = external._size;
+
+		for (size_t i = 0; i < external._size; i++)
+			_data[i] = external[i];
+
+		delete[] external._data;
+		external._size = 0;
+
+		return *this;
+	}
 
 	template<typename T>
 	inline T DynamicArr<T>::operator[](size_t index) { return _data[index]; }
