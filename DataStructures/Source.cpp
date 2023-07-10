@@ -1,26 +1,35 @@
 #include "Header.h"
 
-void StackPresentation();
-void QueuePresentation();
-void DynamicArrayPresentation();
-void SinglyLinkedListPresentation();
-void DoublyLinkedListPresentation();
-void BinaryTreePresentation();
+//
+// * Data structure(data structure).It is a way of combining and interacting data elements.
+// *
+// * The data structure plays an important role in the programming and operation of programs.
+// * Different data structures can be applied in different scenarios depending on the robustness and 
+// * characteristics of the task.
+// *
+//
+
+void StackTest();
+void QueueTest();
+void DynamicArrayTest();
+void SinglyLinkedListTest();
+void DoublyLinkedListTest();
+void BinaryTreeTest();
 
 int main()
 {
-	StackPresentation();
-	QueuePresentation();
-	DynamicArrayPresentation();
-	SinglyLinkedListPresentation();
-	DoublyLinkedListPresentation();
-	BinaryTreePresentation();
+	StackTest();
+	QueueTest();
+	DynamicArrayTest();
+	SinglyLinkedListTest();
+	DoublyLinkedListTest();
+	BinaryTreeTest();
 
 	return 0;
 }
 
-#pragma region Presentation.
-void StackPresentation()
+#pragma region Tests.
+void StackTest()
 {
 	StackDemo::Stack<int> data1;
 	StackDemo::Stack<int> data2;
@@ -42,7 +51,7 @@ void StackPresentation()
 	}
 }
 
-void QueuePresentation()
+void QueueTest()
 {
 	QueueDemo::Queue<int> data1;
 
@@ -53,7 +62,7 @@ void QueuePresentation()
 	cout << data1.front() << " " << data1.back();
 }
 
-void DynamicArrayPresentation()
+void DynamicArrayTest()
 {
 	DynamicArrayDemo::DynamicArr<int> d;
 
@@ -80,7 +89,7 @@ void DynamicArrayPresentation()
 		cout << c[i] << " | ";
 }
 
-void SinglyLinkedListPresentation()
+void SinglyLinkedListTest()
 {
 	SinglyLinkedListDemo::SinglyLinkedList<int> d;
 	SinglyLinkedListDemo::SinglyLinkedList<int> c;
@@ -105,7 +114,7 @@ void SinglyLinkedListPresentation()
 		cout << d[i] << " | ";
 }
 
-void DoublyLinkedListPresentation()
+void DoublyLinkedListTest()
 {
 	DoublyLinkedListDemo::DoublyLinkedList<int> d;
 
@@ -125,7 +134,7 @@ void DoublyLinkedListPresentation()
 		cout << c[i] << ", ";
 }   
 
-void BinaryTreePresentation()
+void BinaryTreeTest()
 {
 	BinaryTreeDemo::BinTree<string, int> d;
 
