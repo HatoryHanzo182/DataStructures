@@ -59,17 +59,24 @@ void DynamicArrayPresentation()
 	d.push_back(1);
 	d.push_back(2);
 	d.push_back(3);
+	d.insert(1, 22);
+
+	DynamicArrayDemo::DynamicArr<int> c;
+
+	c.push_back(33);
+	c.push_back(33);
+	c.push_back(33);
+
+	d.swap(c);
 
 	for (size_t i = 0; i < d.size(); i++)
 		cout << d[i] << " | ";
 
-	d.remove(1);
-	
+
 	cout << endl;
 
-	for (size_t i = 0; i < d.size(); i++)
-		cout << d[i] << " | ";
-
+	for (size_t i = 0; i < c.size(); i++)
+		cout << c[i] << " | ";
 }
 
 void SinglyLinkedListPresentation()
